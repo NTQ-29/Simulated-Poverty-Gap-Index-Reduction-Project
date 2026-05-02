@@ -1,0 +1,22 @@
+#trying to install data visualization tool compatible with R version 4
+install.packages("plotly")
+
+
+#uploading csv file into code editor
+sim_poverty_data <- read.csv('Sim. Poverty data/Simulated Poverty Gap Index Reduction.csv')
+
+#opens dataframe into separate tab for Overview
+summary(sim_poverty_data)
+
+#Viewing unique columns to de-duplicate and normalize data
+sim_poverty_data_unique = unique(sim_poverty_data)
+View(sim_poverty_data)
+print(sim_poverty_data)
+
+#looking at specific columns: Time Period, Urbanization Label & Income Group
+sim_poverty_data[c("TIME_PERIOD", "URBANIZATION_LABEL", "INCOME_GROUP_LABEL")]
+View(sim_poverty_data)
+
+plot(TIME_PERIOD, URBANIZATION_LABEL, INCOME_GROUP_LABEL)
+view(sim_poverty_data)
+
